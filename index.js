@@ -11,6 +11,10 @@ app.use(express.json());
 app.use("/api/license", licenseRouter);
 app.use("/api/api-manange", apimgmtRouter);
 
+app.use("*", (req, res) => {
+  return res.status(404).json({ data: null });
+});
+
 app.listen(PORT, () => {
   console.log(`Express running on ${PORT}`);
 });

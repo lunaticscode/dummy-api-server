@@ -66,7 +66,7 @@ const getLicenseIndexData = (cnt = DEFAULT_ITEM_CNT) => {
     return {
       id: faker.datatype.uuid(),
       no: index + 1,
-      licenseKey: nanoid(),
+      licenseKey: faker.datatype.uuid(),
       prodType: _setLicenseProdType(Math.floor(Math.random() * 2)),
       remainDays,
       createdAt,

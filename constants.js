@@ -62,8 +62,15 @@ const MAP_FUNC_TO_MENU = {
   NOTIFY: ["read", "update", "delete"],
 };
 
+const DB_TABLE = {
+  LICENSE_AUTH: "license_auth",
+  LICENSE_INDEX: "license_index",
+  LICENSE_DEPLOY: "license_deploy",
+};
+
 module.exports = {
   API_PATH,
   VALID_EMAIL_DOMAINS,
   MAP_FUNC_TO_MENU,
+  DB_TABLE,
 };
