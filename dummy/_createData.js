@@ -58,13 +58,16 @@ const _execInsertQuery = async (tbName, data) => {
       db_connection.query(prefix_sql, data, (err, res, field) => {
         if (err) {
           console.log({ err });
-          return resolve(false);
+          resolve(false);
+          return db_connection.end();
         }
-        return resolve(true);
+        resolve(true);
+        return db_connection.end();
       });
     } catch (err) {
       console.log(err);
-      return resolve(false);
+      resolve(false);
+      return db_connection.end();
     }
   });
 };

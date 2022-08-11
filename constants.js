@@ -1,3 +1,5 @@
+const STATIC_PATHNAME = "static";
+const WHITELIST_ORIGINS = ["localhost:3000"];
 const API_PATH = {
   AUTH: "api-auth",
   HOME: {
@@ -69,6 +71,7 @@ const DB_TABLE = {
 };
 
 module.exports = {
+  STATIC_PATHNAME,
   API_PATH,
   VALID_EMAIL_DOMAINS,
   MAP_FUNC_TO_MENU,
